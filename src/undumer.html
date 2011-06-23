@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>Undum EditoR (v.001)</title>
+        
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <!-- YUI -->
+        <script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js" charset="utf-8"></script>
+        
+        <!-- GRIDLESS JS-->
+        <!-- https://github.com/thatcoolguy/gridless-boilerplate -->
+        <script src="assets/js/respond.min.js"></script>
+        
+        <!-- GRIDLESS CSS -->
+        <link rel="stylesheet" href="assets/css/main.css?version=1" />
+
+
+         <!-- UNDUMER JS -->
+         <script src="assets/js/undumer.js"></script>
+
+         <!-- UNDUMER CSS -->
+         <link rel="stylesheet" href="assets/css/undumer.css" />
+
+    </head>
+    <body>
+        <div id="undumer">
+            <div class="hd">
+                <h1 class="title">Undum EditoR</h1>
+                <small class="author">by Andrew Wooldridge</small>
+            </div>
+            <div class="bd">
+                <div class="panels">
+                    <ul>
+                        <li class="properties">
+                            <fieldset>
+                                <legend>Game Properties</legend>
+                                <div>
+                                    <label for="gametitle">Title:</label>
+                                    <input type="text"/>
+                                </div>
+                                <div>
+                                    <button title='Generate the game'>Generate</button>
+                                </div>
+                                
+                            </fieldset>
+                        </li>
+                        <li>
+                            <fieldset>
+                                <legend>Output</legend>
+                                <textarea id="output" rows="10" cols="80"></textarea>
+                            </fieldset>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="ft">
+                
+            </div>
+        </div>
+    </body>
+</html>
