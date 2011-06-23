@@ -2,10 +2,39 @@
  *   http://lab.simurai.com/css/carveme/  
  * 
  */
-
+/**
 .title {
     background-color: rgba(82,96,117,0.5);
     -webkit-background-clip: text;
     color: transparent;
     text-shadow: rgba(255,255,255,0.5) 0 5px 6px;
+}
+**/
+
+html, body {
+    height: 100%;
+    font-family: 'Carter One', arial, serif; 
+    
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    margin: 0px;
+    padding: 4px;
+    font-size:300%;
+    
+}
+
+.title {
+    xcolor: #000;
+/** text-shadow: 2px 2px 2px #2d2d2d; **/
+    text-shadow: 1px 1px 5px gray;
+}
+
+#undumer {
+    font-size: 110%;
 }

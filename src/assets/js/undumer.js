@@ -33,6 +33,6 @@ function generateNoise(opacity) {
 
 YUI().use("node", "event", function(Y){
     Y.on("domready", function(Y){
-        generateNoise(0.1); // default opacity is .2 
+        generateNoise(0.2); // default opacity is .2 
     })
 })
