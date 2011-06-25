@@ -36,5 +36,9 @@ h1 {
 }
 
 #undumer {
-    font-size: 110%;
+    font-size: 120%;
+}
+
+.buttonbar {
+    padding: 4px;   
 }

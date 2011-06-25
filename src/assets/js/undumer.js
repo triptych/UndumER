@@ -32,7 +32,17 @@ function generateNoise(opacity) {
 
 
 YUI().use("node", "event", function(Y){
+    udr = Y.namespace("udr");
+    
+    udr = {
+        init: function(){
+            Y.log("udr: init called");
+            generateNoise(0.2); // default opacity is .2 
+        }
+    };
+    
     Y.on("domready", function(Y){
-        generateNoise(0.2); // default opacity is .2 
+        
+        udr.init();
     })
 })
