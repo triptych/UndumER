@@ -33,16 +33,33 @@ function generateNoise(opacity) {
 
 YUI().use("node", "event", function(Y){
     udr = Y.namespace("udr");
+
     
     udr = {
+        data: {},
         init: function(){
             Y.log("udr: init called");
+            udr.bindings();
             generateNoise(0.2); // default opacity is .2 
+        },
+        bindings: function(){
+            Y.one("#generate").on("click", function(){
+                udr.getData();
+                udr.showData();
+                });
+        },
+        getData: function(){
+            
+            udr.data = { title: Y.one("#gametitle").get("value") };
+            Y.log(udr.data);
+        },
+        showData: function(){
+            Y.one("#output").set("value",udr.data.title);
         }
     };
     
     Y.on("domready", function(Y){
         
         udr.init();
-    })
-})
+    });
+});
