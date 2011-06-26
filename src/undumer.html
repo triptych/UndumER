@@ -9,26 +9,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
         <!-- YUI JS-->
-        <!--
         <script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js" charset="utf-8"></script>
-        -->
-        <script src="assets/lib/yui/build/yui/yui.js" type="application/javascript" charset="UTF-8"></script>
         
        <!-- YUI RESET FONTS BASE CSS-->
 
-        <!--
         <link rel="stylesheet" type="text/css" 
             href="http://yui.yahooapis.com/combo?3.3.0/build/cssfonts/fonts-min.css&3.3.0/build/cssreset/reset-min.css&3.3.0/build/cssbase/base-min.css">
-        -->
-        
-        <link rel="stylesheet" type="text/css"
-            href="assets/lib/yui/build/cssreset/reset.css" >
 
-        <link rel="stylesheet" type="text/css"
-            href="assets/lib/yui/build/cssbase/base.css" >
-            
-        <link rel="stylesheet" type="text/css"
-            href="assets/lib/yui/build/cssfonts/fonts.css" >    
+
          <!-- GOOGLE FONTS -->
          <link href='http://fonts.googleapis.com/css?family=Carter+One&v1' rel='stylesheet' type='text/css'>
 
@@ -38,6 +26,9 @@
 
          <!-- UNDUMER JS -->
          <script src="assets/js/undumer.js"></script>
+         
+         <!-- UNDUMER TEMPLATE -->
+         <script src="assets/templates/html.js"></script>
 
          <!-- UNDUMER CSS -->
          <link rel="stylesheet" href="assets/css/undumer.css" />
@@ -55,7 +46,6 @@
                         
                     </ul>
                 </div>
-                
             </div>
             <div class="bd">
                 <div class="panels">
@@ -63,14 +53,14 @@
                         <li class="properties">
                             <fieldset>
                                 <legend>Game Properties</legend>
-                                <p>
+                                <div>
                                     <label for="gametitle">Title:</label>
-                                    <input type="text" id="gametitle" />
-                                </p>
-                                <p>
+                                    <input type="text" id="gametitle"/>
+                                </div>
+                                <div>
                                     <label for="gameauthor">Author:</label>
-                                    <input type="text" id="gameauthor" />
-                                </p>
+                                    <input type="text" id="gameauthor"/>
+                                </div>
                                 <div class="buttonbar">
                                     <button title='Generate the game' class="button blue bigrounded" id="generate">Generate</button>
                                 </div>

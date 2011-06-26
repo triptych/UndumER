@@ -60,11 +60,21 @@ YUI().use("node", "event", function(Y){
         },
         getData: function(){
             
-            udr.data = { title: Y.one("#gametitle").get("value") };
+            udr.data = { 
+                title: Y.one("#gametitle").get("value"),
+                author: Y.one("#gameauthor").get("value")
+                };
             Y.log(udr.data);
         },
         showData: function(){
-            Y.one("#output").set("value",udr.data.title);
+           // 
+           var substring = udrtemp.html;
+           var string = "";
+           var obj = udr.data;
+           string = Y.Lang.sub(substring, obj);
+           Y.one("#output").set("value",string);
+           
+           
         },
         showPanel: function(pnl){
             Y.log(pnl);
