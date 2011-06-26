@@ -24,23 +24,33 @@ body {
 
 h1 {
     margin: 0px;
-    padding: 4px;
+    padding: 4px 0px 0px 4px;
     font-size:300%;
     
 }
 
 .title {
     text-shadow: 1px 1px 5px gray;
+    margin: 0px;
+    padding: 0px;
 }
 
 #undumer {
     font-size: 120%;
     position: relative;
     height: 100%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .buttonbar {
-    padding: 4px;   
+    padding: 8px;   
+}
+
+.hd .toolbar ul {
+    padding: 0px; 
+    margin: 0px;
 }
 
 
@@ -58,6 +68,12 @@ h1 {
     text-shadow: -1px -1px 1px #FFF;
 }
 
+
+.hd .toolbar ul li a {
+    width: 35px;
+    display: block;
+}
+
 .bd  {
     clear: left;
     padding-top: 16px;
@@ -69,7 +85,35 @@ h1 {
 }
 
 
+.bd .panels #output {
+    width: 60%;
+}
+
 .ft {
     position: absolute;
     bottom: 0px;
+    right: 0px;
+}
+
+.ft .author {
+    padding-right: 8px;
+    cursor: pointer;
+}
+
+.ft .author:hover {
+    color: blue;
+}
+
+
+legend {
+    font-weight: bold;
+    padding-bottom: 8px;
+}
+
+.properties label {
+    width: 100px;
+    float: left;
+    display: block;
+    text-align: right;
+    padding-right: 4px;
 }

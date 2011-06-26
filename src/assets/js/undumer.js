@@ -46,7 +46,17 @@ YUI().use("node", "event", function(Y){
             Y.one("#generate").on("click", function(){
                 udr.getData();
                 udr.showData();
+                udr.showPanel("output");
                 });
+                
+            Y.one("#new").on("click", function(){
+               udr.showPanel("properties"); 
+            });  
+            
+            
+            Y.one(".ft .author").on("click", function(){
+               window.location.href="http://andrewwooldridge.com"; 
+            });    
         },
         getData: function(){
             
@@ -55,6 +65,11 @@ YUI().use("node", "event", function(Y){
         },
         showData: function(){
             Y.one("#output").set("value",udr.data.title);
+        },
+        showPanel: function(pnl){
+            Y.log(pnl);
+            Y.all(".bd .panels ul li").setStyle("display", "none");
+            Y.all(".bd .panels ul li."+pnl).setStyle("display", "block");
         }
     };
     
