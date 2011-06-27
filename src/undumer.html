@@ -43,6 +43,8 @@
                         <li><a id="new">new</a></li>
                         <li><a id="save">save</a></li>
                         <li><a id="load">load</a></li>
+                        <li> - </li>
+                        <li><a id="preview">preview</a></li>
                         
                     </ul>
                 </div>
@@ -71,6 +73,15 @@
                             <fieldset>
                                 <legend>Output</legend>
                                 <textarea id="output" rows="10" cols="80"></textarea>
+                            </fieldset>
+                            <div class="buttonbar">
+                                <button title='Preview' class="button blue bigrounded" id="preview">Preview</button>
+                            </div>
+                        </li>
+                        <li class="preview">
+                            <fieldset>
+                                <legend>Preview</legend>
+                                <iframe src="javascript: void(0)"></iframe>
                             </fieldset>
                         </li>
                     </ul>
