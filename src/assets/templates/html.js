@@ -12,5 +12,9 @@ udrtemp = {
 "<title>{title} by {author}</title>"+
 "<link href='http://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>"+
 "</head>"+
+"<body>"+
+"<div></div>"+
+"</body>"+
 "</html>"
 };
+

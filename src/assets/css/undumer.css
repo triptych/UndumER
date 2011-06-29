@@ -19,21 +19,21 @@ html, body {
 }
 
 body {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
-    margin: 0px;
-    padding: 4px 0px 0px 4px;
+    margin: 0;
+    padding: 4px 0 0 4px;
     font-size:300%;
     
 }
 
 .title {
     text-shadow: 1px 1px 5px gray;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 #undumer {
