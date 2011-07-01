@@ -9,12 +9,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
         <!-- YUI JS-->
-        <script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js" charset="utf-8"></script>
+        <script src="assets/lib/yui/build/yui/yui-min.js" charset="utf-8"></script>
         
        <!-- YUI RESET FONTS BASE CSS-->
-
+<!--
         <link rel="stylesheet" type="text/css" 
             href="http://yui.yahooapis.com/combo?3.3.0/build/cssfonts/fonts-min.css&3.3.0/build/cssreset/reset-min.css&3.3.0/build/cssbase/base-min.css">
+-->
+        <link rel="stylesheet" type="text/css" href="assets/lib/yui/build/cssbase/base.css" >
+<link rel="stylesheet" type="text/css" href="assets/lib/yui/build/cssfonts/fonts.css" >
+<link rel="stylesheet" type="text/css" href="assets/lib/yui/build/cssreset/reset.css" >
 
 
          <!-- GOOGLE FONTS -->
@@ -41,11 +45,11 @@
                 <h1 class="title">Undum EditoR</h1>
                 <div class="toolbar">
                     <ul>
-                        <li><a id="new">new</a></li>
-                        <li><a id="save">save</a></li>
-                        <li><a id="load">load</a></li>
+                        <li><a id="tb_new">new</a></li>
+                        <li><a id="tb_save">save</a></li>
+                        <li><a id="tb_load">load</a></li>
                         <li> - </li>
-                        <li><a id="preview">preview</a></li>
+                        <li><a id="tb_preview">preview</a></li>
                         
                     </ul>
                 </div>
@@ -82,7 +86,7 @@
                         <li class="preview">
                             <fieldset>
                                 <legend>Preview</legend>
-                                <iframe src="javascript: void(0)"></iframe>
+                                <iframe src="javascript: void(0)" id="preview_iframe"></iframe>
                             </fieldset>
                         </li>
                     </ul>

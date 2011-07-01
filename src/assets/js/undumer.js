@@ -28,7 +28,28 @@ function generateNoise(opacity) {
    document.body.style.backgroundImage = "url(" + canvas.toDataURL("image/png") + ")";  
 }  
  
-  
+  /**
+   * emb.Panel = new Y.InjectionEngine({
+             css: [
+                    'http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css',
+                    '.hd {display: none;}',
+                    theCSS
+                ],
+                js: [
+                   'http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js',
+                   localInjection,
+                   theJS
+                ],
+                beacons: beaconsData,
+                embConfigs: emb.CONFIGS,
+                dynamicAttrs: ["beacons","embConfigs"],
+                html: emb.Data.fetch,
+                container: ifContainer
+           });
+            
+               
+            emb.Panel.boot(); 
+   */
 
 
 YUI().use("node", "event", function(Y){
@@ -49,10 +70,14 @@ YUI().use("node", "event", function(Y){
                 udr.showPanel("output");
                 });
                 
-            Y.one("#new").on("click", function(){
+            Y.one("#tb_new").on("click", function(){
                udr.showPanel("properties"); 
             });  
             
+            Y.one("#preview, #tb_preview").on("click", function(){
+                Y.log("preview button clicked")
+                udr.showPanel("preview");
+            })
             
             Y.one(".ft .author").on("click", function(){
                window.location.href="http://andrewwooldridge.com"; 
