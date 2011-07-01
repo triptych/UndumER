@@ -114,11 +114,13 @@ YUI({
           var data = udr.data,
             substring = udrtemp.html;
             
-          udr.markup = Y.Lang.sub(substring, data);   
+          udr.markup = Y.Lang.sub(substring, data); 
+          //Y.log(udr.markkup);  
         },
         showPreview:function(){
             Y.log("undumer: showPreview called");
             var container = "#preview_iframe_wrapper";
+            
             
             Y.one(container).setContent("");
             
@@ -127,6 +129,15 @@ YUI({
             
             udr.panel = new Y.InjectionEngine({
                container: "#preview_iframe_wrapper",
+               css: [
+                'http://fonts.googleapis.com/css?family=Tangerine',
+                'assets/lib/undum/games/media/css/undum.css'
+               ],
+               js: [
+                'assets/lib/jquery/jquery.min.js',
+                'assets/lib/undum/games/media/js/undum.js',
+                'assets/lib/undum/games/media/games/tutorial/tutorial.game.en.js'
+               ],
                html: udr.markup
             });
             udr.panel.boot();

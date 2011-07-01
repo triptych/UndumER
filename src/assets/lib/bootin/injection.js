@@ -415,22 +415,29 @@ Y.extend(InjectionEngine, Y.Base, {
         // setting the bootstrap engine css (usually a full rollout)
         Y.each(CSS, function (value, indx) {
             //Y.log("inj: y.each css")
-            value = instance._testFullURL(value);
+            //Y.log(value);
+            //value = instance._testFullURL(value);
+            /** Warning - breaking functionality to get relative urls as links
             CSS[indx] = ( value && Y.Lang.isObject(value) ?
                             '<link rel="stylesheet" type="text/css" href="' + value.url + '"/>' :
                             '<style>' + value + '</style>'
                         );
+                        **/
+             CSS[indx] = '<link rel="stylesheet" type="text/css" href="' + value + '"/>'          
         });
         // setting the bootstrap engine js (usually a full rollout)
         Y.each(JS, function (value, indx) {
             //Y.log("inj: y.each js")
-            value = instance._testFullURL(value);
+           // value = instance._testFullURL(value);
+            /** Warning - breaking functionality to get relative links
             JS[indx] = ( value && Y.Lang.isObject(value) ?
                            // '<' + script + ' src="' + value.url + '"></' + script + '>' :
                            // '<' + script + '>' + value + '</' + script + '>'
                            '<' + script + ' type="text/javascript" src="' + value.url + '"></' + script + '>' :
                            '<' + script + ' type="text/javascript" >' + value + '</' + script + '>'
                        );
+                       **/
+            JS[indx] =  '<' + script + ' type="text/javascript" src="' + value + '"></' + script + '>' ;        
         });
 
         //Y.log(JS);

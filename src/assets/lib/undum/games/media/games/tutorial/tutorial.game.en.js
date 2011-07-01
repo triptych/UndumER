@@ -19,7 +19,7 @@ undum.game.version = "1.0";
 undum.game.situations = {
     start: new undum.SimpleSituation(
         "<h1>Starting Out with Undum</h1>\
-        <img src='media/games/tutorial/woodcut1.png' class='float_right'>\
+        <img src='assets/lib/undum/games/media/games/tutorial/woodcut1.png' class='float_right'>\
         <p>Welcome to the Undum tutorial. Undum is a tool for writing\
         hypertext interactive fiction. It has some unique features\
         and a visual design that encourages narrative games.</p>\
