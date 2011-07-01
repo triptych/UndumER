@@ -77,7 +77,7 @@ YUI({
         init: function(){
             Y.log("udr: init called");
             udr.bindings();
-            generateNoise(0.2); // default opacity is .2 
+            //generateNoise(0.2); // default opacity is .2 
         },
         bindings: function(){
             Y.one("#generate").on("click", function(){

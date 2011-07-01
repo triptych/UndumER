@@ -11,6 +11,9 @@
 }
 **/
 
+html {
+    background-image: url("../img/old_mathematics.png");
+}
 
 html, body {
     height: 100%;
