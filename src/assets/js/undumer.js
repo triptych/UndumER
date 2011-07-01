@@ -52,7 +52,21 @@ function generateNoise(opacity) {
    */
 
 
-YUI().use("node", "event", function(Y){
+
+
+
+YUI({
+    modules: {
+        "injection-engine":{
+            requires:['node','base-base'],
+            fullpath: "assets/lib/bootin/injection.js",
+        },
+        "bootstrap-engine": {
+            requires:['node','base-base'],
+            fullpath: "assets/lib/bootin/bootstrap.js",
+        }
+    }
+}).use("node", "event", "injection-engine", "bootstrap-engine", function(Y){
     udr = Y.namespace("udr");
 
     
