@@ -68,10 +68,12 @@ YUI({
     }
 }).use("node", "event", "injection-engine", "bootstrap-engine", function(Y){
     udr = Y.namespace("udr");
-
+    
     
     udr = {
         data: {},
+        markup: "",
+        panel: null,
         init: function(){
             Y.log("udr: init called");
             udr.bindings();
@@ -79,8 +81,9 @@ YUI({
         },
         bindings: function(){
             Y.one("#generate").on("click", function(){
-                udr.getData();
-                udr.showData();
+                udr.setData();
+                udr.setMarkup();
+                udr.showMarkup();
                 udr.showPanel("output");
                 });
                 
@@ -88,33 +91,59 @@ YUI({
                udr.showPanel("properties"); 
             });  
             
-            Y.one("#preview, #tb_preview").on("click", function(){
+            Y.all("#preview, #tb_preview").on("click", function(){
                 Y.log("preview button clicked")
-                udr.showPanel("preview");
+                udr.showPreview();
+                
             })
             
             Y.one(".ft .author").on("click", function(){
                window.location.href="http://andrewwooldridge.com"; 
             });    
         },
-        getData: function(){
+        setData: function(){
+            var title = Y.one("#gametitle").get("value"),
+                author = Y.one("#gameauthor").get("value");
+                
+            udr.data = {
+                title: title,
+                author: author
+            };    
+        },
+        setMarkup: function(){
+          var data = udr.data,
+            substring = udrtemp.html;
             
-            udr.data = { 
-                title: Y.one("#gametitle").get("value"),
-                author: Y.one("#gameauthor").get("value")
-                };
+          udr.markup = Y.Lang.sub(substring, data);   
+        },
+        showPreview:function(){
+            Y.log("undumer: showPreview called");
+            var container = "#preview_iframe_wrapper";
+            
+            Y.one(container).setContent("");
+            
+            udr.showPanel("preview");
+            
+            
+            udr.panel = new Y.InjectionEngine({
+               container: "#preview_iframe_wrapper",
+               html: udr.markup
+            });
+            udr.panel.boot();
+            
+        },
+        getData: function(){
             Y.log(udr.data);
+            return udr.data;
         },
-        showData: function(){
-           // 
-           var substring = udrtemp.html;
-           var string = "";
-           var obj = udr.data;
-           string = Y.Lang.sub(substring, obj);
-           Y.one("#output").set("value",string);
+        showMarkup: function(){
+           
+           Y.one("#output").set("value",udr.markup);
+           
            
            
         },
+        
         showPanel: function(pnl){
             Y.log(pnl);
             Y.all(".bd .panels ul li").setStyle("display", "none");

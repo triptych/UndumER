@@ -1,4 +1,4 @@
-YUI.add('temp-injection-engine', function(Y) {
+YUI.add('injection-engine', function(Y) {
 
 /**
  * Injection Engine for Plug and Play widgets. This class is a phanton class for a 
