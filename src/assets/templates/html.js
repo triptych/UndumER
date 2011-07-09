@@ -5,8 +5,7 @@
 
 udrtemp = {
  html: 
-'<div> hello {title} by {author}</div>\
-<div id="toolbar">\
+'<div id="toolbar">\
 <h1>Undum</h1>\
 <div class="nav">\
 <a href="#" class="button" id="menu-button">Menu</a>\

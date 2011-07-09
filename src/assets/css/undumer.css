@@ -128,5 +128,10 @@ textarea {
 
 #preview_iframe_wrapper iframe{
     width: 100%;
-    height: 300px;
+    height: 400px;
+}
+
+.row {
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
