@@ -2,6 +2,17 @@
 <html lang="en">
     <head>
         <title>Undum EditoR</title>
+        <!-- YUI CSS -->
+        <link rel="stylesheet" type="text/css" href="assets/lib/yui/build/cssbase/base.css" >
+        <link rel="stylesheet" type="text/css" href="assets/lib/yui/build/cssfonts/fonts.css" >
+        <link rel="stylesheet" type="text/css" href="assets/lib/yui/build/cssreset/reset.css" >
+        
+        <!-- GOOGLE FONTS --> 
+         <link href='http://fonts.googleapis.com/css?family=Carter+One&v1' rel='stylesheet' type='text/css'>
+         
+        <!-- UNDUMER CSS -->        
+        <link rel="stylesheet" href="assets/css/undumer_mvc.css" />
+        
         <!-- NEW YUI 3.4 -->
         <script src="http://fuji.jetpants.com/yui/combo/yui3?build/yui/yui.js"></script>
         <!-- UNDUMER JS -->
@@ -10,7 +21,17 @@
     <body>
         <div id="undumer">
             <div class="hd">
-                
+               <h1 class="title">Undum EditoR</h1>
+                <div class="toolbar">
+                    <ul>
+                        <li><a id="tb_new">new</a></li>
+                        <li><a id="tb_save">save</a></li>
+                        <li><a id="tb_load">load</a></li>
+                        <li> - </li>
+                        <li><a id="tb_preview">preview</a></li>
+                        
+                    </ul>
+                </div> 
             </div>
             <div class="bd">
                 
