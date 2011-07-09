@@ -1,0 +1,69 @@
+/** tags **/
+
+html {
+    background-image: url("../img/old_mathematics.png");
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Carter One', arial, serif; 
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 4px 0 0 4px;
+    font-size:300%;
+    
+}
+
+/** classes **/
+
+/** .hd **/
+.hd .toolbar ul {
+    padding: 0px; 
+    margin: 0px;
+}
+
+.hd .toolbar ul li {
+    list-style-type: none;
+    float: left;
+    display: block;
+    padding: 0px 8px;
+    text-shadow: 1px 1px 1px #FFF;
+    cursor: pointer;
+}
+
+.hd .toolbar ul li:hover {
+    font-weight: bold;
+    text-shadow: -1px -1px 1px #FFF;
+}
+
+.hd .toolbar ul li a {
+    width: 35px;
+    display: block;
+}
+
+
+
+.title {
+    text-shadow: 1px 1px 5px gray;
+    margin: 0;
+    padding: 0;
+}
+
+/** ids **/
+
+#undumer {
+    font-size: 120%;
+    position: relative;
+    height: 100%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
