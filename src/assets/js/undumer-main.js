@@ -8,7 +8,7 @@ var Y = YUI({
     root     : 'build/',
     modules: {
         "undumer-core": {
-            requires: ["node", "event"],
+            requires: ["node", "event", "base", "app"],
             fullpath: "assets/js/undumer-core.js"
         },
         "injection-engine":{
@@ -20,8 +20,8 @@ var Y = YUI({
             fullpath: "assets/lib/bootin/bootstrap.js",
         }
     }
-}).use("undumer-core","event", function(Y){
-    Y.log("undumer: in use...");
+}).use("undumer-core","event","node","base", "app", function(Y){
+    Y.log("undum-main.js undumer: in use...");
     
     Y.on("domready", function(e){
         Y.log("hi");
