@@ -13,11 +13,11 @@ var Y = YUI({
         },
         "injection-engine":{
             requires:['node','base-base'],
-            fullpath: "assets/lib/bootin/injection.js",
+            fullpath: "assets/lib/bootin/injection.js"
         },
         "bootstrap-engine": {
             requires:['node','base-base'],
-            fullpath: "assets/lib/bootin/bootstrap.js",
+            fullpath: "assets/lib/bootin/bootstrap.js"
         }
     }
 }).use("undumer-core","event","node","base", "app", function(Y){
@@ -27,5 +27,5 @@ var Y = YUI({
         Y.log("hi");
         
         
-    })
+    });
 });
