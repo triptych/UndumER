@@ -50,6 +50,24 @@ h1 {
 }
 
 
+.ft {
+    position: absolute;
+    bottom: 14px;
+    right: 0px;
+}
+
+.ft .author {
+    padding-right: 8px;
+    cursor: pointer;
+}
+
+.ft .author:hover {
+    color: blue;
+}
+
+
+
+
 
 .title {
     text-shadow: 1px 1px 5px gray;
