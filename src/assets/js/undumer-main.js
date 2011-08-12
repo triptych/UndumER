@@ -3,9 +3,6 @@
 // pulls together all the modules and starts things up
 
 var Y = YUI({
-    comboBase: 'http://fuji.jetpants.com/yui/combo/yui3?',
-    combine  : true,
-    root     : 'build/',
     modules: {
         "undumer-core": {
             requires: ["node", "event", "base", "app"],
